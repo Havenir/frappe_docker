@@ -1,0 +1,6 @@
+sudo docker run --rm \
+    -e "MYSQL_ROOT_PASSWORD=admin" \
+    -v gppertdockercompose_sites-vol:/home/frappe/frappe-bench/sites \
+    -v /home/ubuntu/gppert-docker-compose/backups:/home/frappe/backups \
+    --network gppertdockercompose_default \
+    havenir/gppert-worker:version-11 restore-backup

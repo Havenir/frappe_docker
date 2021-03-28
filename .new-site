@@ -1,0 +1,9 @@
+docker run \
+    -e "SITE_NAME=kevin66.gppert.com" \
+    -e "DB_ROOT_USER=root" \
+    -e "MYSQL_ROOT_PASSWORD=admin" \
+    -e "ADMIN_PASSWORD=$ADMIN_PASSWORD" \
+    -e "INSTALL_APPS=erpnext,gppert" \
+    -v gppertdockercompose_sites-vol:/home/frappe/frappe-bench/sites \
+    --network gppertdockercompose_default \
+    havenir/gppert-worker:version-11 new

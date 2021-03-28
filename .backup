@@ -1,0 +1,6 @@
+sudo docker run \
+    -e "SITES=kevin55.gppert.com" \
+    -e "WITH_FILES=0" \
+    -v gppertdockercompose_sites-vol:/home/frappe/frappe-bench/sites \
+    --network gppertdockercompose_default \
+    havenir/gppert-worker:version-11 backup
